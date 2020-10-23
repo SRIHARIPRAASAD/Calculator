@@ -20,7 +20,7 @@ namespace ConsoleCalculator.CommonFunctions
                 return KeyPressed.Clear;
             else if (key.Equals('.'))
                 return KeyPressed.Decimal;
-            else if (key.Equals('='))
+            else if (key.Equals('=') || key.Equals('\r'))
                 return KeyPressed.Equals;
 
             return KeyPressed.Undefined;

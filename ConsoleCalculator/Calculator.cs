@@ -60,12 +60,16 @@ namespace ConsoleCalculator
 
                 }
             }
+            catch (DivideByZeroException ex)
+            {
+                ResetToDefaults();
+                return "Cannot divide by zero";
+            }
             catch (Exception ex)
             {
                 ResetToDefaults();
                 return calcErrorMessage;                
-            }   
-           
+            }              
         }
 
         private void ResetToDefaults()
